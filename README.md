@@ -53,13 +53,8 @@ That step makes finding separate objects incredibly easier.
 ![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193475336-c6cf4519-5080-4447-a3c6-d2ce846ca760.jpg)
 ![thresh_Bricks_4](https://user-images.githubusercontent.com/78561567/193475338-7aa3e881-c00c-4da2-8332-909581b17f00.jpg)
 
-Given approach gives satisfying accuracy ~0.94 and processes given 4 images in 584 millis.
+Given approach gives satisfying accuracy ~0.94 and processes given images in 584 millis.
 
 ## Usage
 
-### Installation
-  To install the script simply paste this into console and press enter `git clone TODO`
-  All the images should be placed into the `images` folder. TODO 
-
-TODO
-## Screenshots
+Simply run `python3 main.py` after downloading the script. The output given is number of bricks on every image located in the `./images` folder. Modified images with green dots are located in the `./res` folder.
