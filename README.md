@@ -21,9 +21,9 @@ The algorithm consists of the following steps:
 #### Thresholding
   After the grayscaling and blurring we apply adaptive thresholding with gaussian sum over the kernel with size 21x21 and constant of 3.
   
-![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193474876-6f2a340b-d5cf-4851-886b-80cef0afdc5f.jpg)
 ![thresh_Bricks_1](https://user-images.githubusercontent.com/78561567/193474881-abca9091-0072-45ac-a959-587c3f161b55.jpg)
 ![thresh_Bricks_2](https://user-images.githubusercontent.com/78561567/193474882-c7d35d4e-5584-4f63-bf78-33e90e8cf1a3.jpg)
+![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193474876-6f2a340b-d5cf-4851-886b-80cef0afdc5f.jpg)
 ![thresh_Bricks_4](https://user-images.githubusercontent.com/78561567/193474884-0044a157-e3f4-4216-a707-fd59197ba9cf.jpg)
 
 That step makes finding separate objects incredibly easier.
