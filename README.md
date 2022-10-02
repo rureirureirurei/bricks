@@ -40,6 +40,8 @@ That step makes finding separate objects incredibly easier.
 #### Eroding
   The main problem left after the thresholding is applied are the bricks with identical colour 'glued' together. To fix this, we will apply eroding with the kernel of size 19x19 and initial values at -5. After the image is eroded, the amount of 'glued' bricks significantly reduces.
   
+  While this method gives an accurate result, sometimes it can have a noticeable error in the case of small-sized bricks which are fully destroyed with the erosion. This case is checked separately and the smaller sized erosion kernel 3x3 is applied. (More formally, we check if the number of contours is significantly reduced).
+  
 ![thresh_Bricks_1](https://user-images.githubusercontent.com/78561567/193475236-a8673b99-d319-47f0-909c-a64bd646e7de.jpg)
 ![thresh_Bricks_2](https://user-images.githubusercontent.com/78561567/193475238-1797f709-ba1c-4014-b98a-bc94e2ba451a.jpg)
 ![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193475240-7263641b-780d-4ac9-9ff1-1d8b8ec690d5.jpg)
