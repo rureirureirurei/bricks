@@ -51,8 +51,6 @@ That step makes finding separate objects incredibly easier.
 ![thresh_Bricks_1](https://user-images.githubusercontent.com/78561567/193475331-1a3efa5a-47e0-450f-a6ae-1e0034c38e3f.jpg)
 ![thresh_Bricks_2](https://user-images.githubusercontent.com/78561567/193475334-2123a4ed-b5ac-4d1d-aead-f284b0e7d945.jpg)
 ![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193475336-c6cf4519-5080-4447-a3c6-d2ce846ca760.jpg)
-
-
 ![thresh_Bricks_4](https://user-images.githubusercontent.com/78561567/193475338-7aa3e881-c00c-4da2-8332-909581b17f00.jpg)
 
 Given approach gives satisfying accuracy ~0.94 and processes given 4 images in 584 millis.
