@@ -9,10 +9,10 @@ WIDTH = 800
 HEIGHT = 800
 
 NOICE_KERNEL_SIZE = (9, 9)
-ADAPTIVE_THRESHHOLD_KERNEL_SIZE = 21
-ADAPTIVE_THRESHHOLD_CONSTANT = 3
-CONTOUR_AREA_THRESHHOLD = 250
-CONTOUR_AREA_COUNTING_THRESHHOLD = 50
+ADAPTIVE_THRESHOLD_KERNEL_SIZE = 21
+ADAPTIVE_THRESHOLD_CONSTANT = 3
+CONTOUR_AREA_THRESHOLD = 250
+CONTOUR_AREA_COUNTING_THRESHOLD = 50
 CONTOURS_DELTA = 150
 EROSION_KERNEL = np.full((15,15), -5, np.uint8)
 EROSION_KERNEL_SMALL_PIECES = np.full((3,3), -5, np.uint8)
@@ -32,10 +32,10 @@ def find_filtered_contours(image, limitation_type):
         contours_filtered = []
         for contour in contours:
             if limitation_type == 1:
-                if cv.contourArea(contour) < CONTOUR_AREA_THRESHHOLD: 
+                if cv.contourArea(contour) < CONTOUR_AREA_THRESHOLD: 
                     contours_filtered.append(contour)
             if limitation_type == 2: 
-                if cv.contourArea(contour) > CONTOUR_AREA_COUNTING_THRESHHOLD: 
+                if cv.contourArea(contour) > CONTOUR_AREA_COUNTING_THRESHOLD: 
                     hull = cv.convexHull(contour)
                     contours_filtered.append(hull)
         return contours_filtered
@@ -50,7 +50,7 @@ if __name__ == "__main__":
         shrinked = cv.resize(img, (WIDTH, HEIGHT))
         blurred = cv.GaussianBlur(shrinked, (NOICE_KERNEL_SIZE), 0)
         grayscaled = cv.cvtColor(blurred, cv.COLOR_BGR2GRAY)
-        thresh = cv.adaptiveThreshold(grayscaled,255,cv.ADAPTIVE_THRESH_MEAN_C,cv.THRESH_BINARY,ADAPTIVE_THRESHHOLD_KERNEL_SIZE,ADAPTIVE_THRESHHOLD_CONSTANT)
+        thresh = cv.adaptiveThreshold(grayscaled,255,cv.ADAPTIVE_THRESH_MEAN_C,cv.THRESH_BINARY,ADAPTIVE_THRESHOLD_KERNEL_SIZE,ADAPTIVE_THRESHOLD_CONSTANT)
         thresh_inversed = cv.bitwise_not(thresh)
         contours = find_filtered_contours(thresh, 1)
         for contour in contours:
