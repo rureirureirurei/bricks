@@ -54,8 +54,6 @@ The aim is to accurately count the number of bricks in a photograph.
 ![thresh_Bricks_3](https://user-images.githubusercontent.com/78561567/193475336-c6cf4519-5080-4447-a3c6-d2ce846ca760.jpg)
 ![thresh_Bricks_4](https://user-images.githubusercontent.com/78561567/193475338-7aa3e881-c00c-4da2-8332-909581b17f00.jpg)
 
-Given approach gives satisfying accuracy ~0.94 and processes given images in 584 millis.
-
 
 ## Results
 
